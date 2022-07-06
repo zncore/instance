@@ -1,0 +1,21 @@
+{
+  "name": "zncore/instance",
+  "type": "extension",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Zn Developer",
+      "email": "zndev@ya.ru"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    
+  },
+  "autoload": {
+    "psr-4": {
+      "ZnCore\\Instance\\": "src",
+      "ZnCore\\Instance\\Tests\\": "tests"
+    }
+  }
+}
