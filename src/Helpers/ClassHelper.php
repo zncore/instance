@@ -3,17 +3,28 @@
 namespace ZnCore\Instance\Helpers;
 
 use Psr\Container\ContainerInterface;
+use ZnCore\Container\Helpers\ContainerHelper;
 use ZnCore\Contract\Common\Exceptions\InvalidArgumentException;
 use ZnCore\Contract\Common\Exceptions\InvalidConfigException;
-use ZnCore\Instance\Exceptions\NotInstanceOfException;
-use ZnCore\Container\Helpers\ContainerHelper;
 use ZnCore\Entity\Helpers\EntityHelper;
+use ZnCore\Instance\Exceptions\NotInstanceOfException;
 
 /**
  * Работа с классами
  */
 class ClassHelper
 {
+
+    /**
+     * Проверка существования касса, интерейса или трэйта.
+     * @param string $name
+     * @return bool
+     */
+    public static function isExist(string $name): bool
+    {
+        $name = trim($name, '\\');
+        return class_exists($name) || interface_exists($name) || trait_exists($name);
+    }
 
     /**
      * Является ли объект инстансом класса/интерфейса
