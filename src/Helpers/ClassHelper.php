@@ -108,8 +108,8 @@ class ClassHelper
     public static function getClassOfClassName(string $class)
     {
         $lastPos = strrpos($class, '\\');
-        $name = substr($class, $lastPos + 1);
-        return $name;
+        $name = substr($class, $lastPos);
+        return trim($name, '\\');
     }
 
     /**
