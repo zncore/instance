@@ -45,7 +45,7 @@ class InstanceProvider
             $instance = $definition;
         } else {
             $definition = ClassHelper::normalizeComponentConfig($definition);
-            if(isset($definition['__construct'])) {
+            if (isset($definition['__construct'])) {
                 $constructorParameters = ArrayHelper::merge($constructorParameters, $definition['__construct']);
                 unset($definition['__construct']);
             }

@@ -2,11 +2,10 @@
 
 namespace ZnCore\Instance\Libs\Resolvers;
 
-use Psr\Container\ContainerInterface;
-use ZnCore\Instance\Exceptions\ClassNotFoundException;
-use ZnCore\Contract\Common\Exceptions\InvalidConfigException;
-use ZnCore\Instance\Helpers\ClassHelper;
 use ZnCore\Container\Traits\ContainerAwareTrait;
+use ZnCore\Contract\Common\Exceptions\InvalidConfigException;
+use ZnCore\Instance\Exceptions\ClassNotFoundException;
+use ZnCore\Instance\Helpers\ClassHelper;
 
 class InstanceResolver
 {

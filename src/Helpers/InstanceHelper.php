@@ -4,7 +4,6 @@ namespace ZnCore\Instance\Helpers;
 
 use Psr\Container\ContainerInterface;
 use ZnCore\Instance\Libs\Resolvers\InstanceResolver;
-use ZnCore\Container\Helpers\ContainerHelper;
 
 /**
  * Работа с объектами

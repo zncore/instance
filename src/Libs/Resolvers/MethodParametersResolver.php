@@ -30,14 +30,13 @@ class MethodParametersResolver
 //                $constructorParameters = $this->extractMethodParameters($className, $methodName);
 
 
-                if(is_array($closure)) {
+                if (is_array($closure)) {
                     $constructorParameters = $this->extractMethodParameters($closure[0], $closure[1]);
                     $constructionArgs = $this->extractParams($constructorParameters, $constructionArgs);
-                } elseif(is_callable($closure)) {
+                } elseif (is_callable($closure)) {
                     $reflectionClass = new \ReflectionFunction($closure);
                     $constructorParameters = $reflectionClass->getParameters();
                 }
-
 
 
                 $constructionArgs = $this->extractParams($constructorParameters, $constructionArgs);
