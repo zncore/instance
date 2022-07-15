@@ -3,10 +3,10 @@
 namespace ZnCore\Instance\Helpers;
 
 use Psr\Container\ContainerInterface;
+use ZnCore\Code\Helpers\PropertyHelper;
 use ZnCore\Container\Helpers\ContainerHelper;
 use ZnCore\Contract\Common\Exceptions\InvalidArgumentException;
 use ZnCore\Contract\Common\Exceptions\InvalidConfigException;
-use ZnDomain\Entity\Helpers\EntityHelper;
 use ZnCore\Instance\Exceptions\NotInstanceOfException;
 
 /**
@@ -196,7 +196,7 @@ class ClassHelper
     {
         if (!empty($properties)) {
             self::clearDefinition($properties);
-            EntityHelper::setAttributes($object, $properties);
+            PropertyHelper::setAttributes($object, $properties);
         }
     }
 
