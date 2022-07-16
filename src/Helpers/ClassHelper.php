@@ -27,7 +27,7 @@ class ClassHelper
     }
 
     /**
-     * Является ли объект инстансом класса/интерфейса
+     * Проверяет, является ли объект инстансом класса/интерфейса
      * @param $instance
      * @param string $interface
      * @param bool $allowString
@@ -224,7 +224,7 @@ class ClassHelper
     }
 
     /**
-     * Является ли строка именем класса
+     * Проверяет, является ли строка именем класса
      * @param string $name
      * @return bool
      */
